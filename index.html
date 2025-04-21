@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Saba & Fazal Wedding</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+        :root {
+            --bg-color: #fff0f5;
+            --text-color: #000;
+            --card-bg: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+            --title-color: #e60d0d;
+            --accent-color: #d6336c;
+        }
+
+        body.dark {
+            --bg-color: #121212;
+            --text-color: #fff;
+            --card-bg: radial-gradient(circle, rgba(50, 50, 50, 1) 0%, rgba(80, 80, 80, 1) 100%);
+            --title-color: #f06292;
+            --accent-color: #90caf9;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #3F5EFB;
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+            color: var(--text-color);
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            transition: background 0.5s, color 0.5s;
+            padding: 1rem;
+        }
+
+        #themeToggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--text-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .card,
+        .cards,
+        .cards-2 {
+            background: var(--card-bg);
+            padding: 2rem;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .titles {
+            font-size: 2.5rem;
+            color: var(--title-color);
+            margin-bottom: 0.5rem;
+            font-family: "Style Script", cursive;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .names {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #de15e1;
+            margin-bottom: 2rem;
+        }
+
+        .info {
+            font-size: 1.1rem;
+            color: #fbfbfb;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .btn-location {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1.5rem;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #ff4081, #ff80ab);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 64, 129, 0.4);
+        }
+
+        .btn-location:hover {
+            background: linear-gradient(135deg, #f50057, #ff4081);
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 64, 129, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .btn-location {
+                width: 100%;
+                font-size: 1.1rem;
+                padding: 1rem;
+            }
+        }
+
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 1rem;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s;
+            cursor: pointer;
+            margin: 0.5rem auto;
+        }
+
+        .btn:hover {
+            background-color: #e11dd1;
+        }
+
+        .father {
+            font-size: 15px;
+            color: rgb(195, 42, 169);
+            font-weight: bold;
+        }
+
+        li::marker {
+            color: rgba(148, 37, 56, 0.871);
+        }
+
+        .sazal {
+            font-family: "Style Script", cursive;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 50px;
+            color: #7e0d67;
+            border: 2px solid red;
+            border-radius: 20px;
+        }
+
+        #logos {
+            height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .titles {
+                font-size: 2rem;
+            }
+
+            .subtitle,
+            .info {
+                font-size: 1rem;
+            }
+
+            .names {
+                font-size: 1.5rem;
+            }
+
+            .sazal {
+                font-size: 36px;
+            }
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <button id="themeToggle">🌙</button>
+
+    <div class="card" data-aos="fade-up">
+        <div class="titles" data-aos="fade-down"><u>You're Invited! 💝🤗</u></div>
+        <div class="subtitle" data-aos="zoom-in">
+            <img src="bismillah-removebg-preview.png" alt="bismillah"><br>
+            <span style="color: rgb(240, 11, 103);">
+                IN THE NAME OF ALLAH,<br>THE MOST GRACIOUS & MOST MERCIFUL <br>
+                <strong>TOGETHER WITH THEIR FAMILIES</strong>
+            </span>
+            <br><br>
+            <span class="sazal">#SAZAL💞 </span>
+        </div>
+        <div class="names" data-aos="fade-up">
+            <img src="saba.png" alt=""> <br>
+            <span class="father">D/o Mr. Dr Syed Kaisar Husain</span>
+            <br><span style="color: #de0a0e;">Weds</span> 💞<br>
+            <img src="fazal.png" alt="fazal">
+            <br>
+            <span class="father">S/o Mr. Syed Hasan Abbas</span>
+        </div>
+        <div class="cards" data-aos="fade-right">
+            <span style="color: white;">
+                <img src="program.png" alt="" style="height: 40px;"> 🎾💝
+            </span>
+            <br><br>
+            🗕 <b style="color: rgb(177, 14, 93);"><u>11 October, 2025 Saturday</u></b>
+            <br>
+            <ul style="text-align:left; display: inline-block;">
+                <li>🎀 GATHERING : 07:00 P.M</li>
+                <li><img src="bride.png" alt="bride" id="logos"> NIKAAH : 08:00 P.M</li>
+                <li><span id="logos">🥂</span> DINNER : 09:00 P.M</li>
+            </ul>
+        </div>
+        <div class="cards-2" data-aos="fade-left">
+            <img src="venue.png" alt="venue">
+            <br><br>
+            📍 Dr. Syed Imdad Colony <br>
+            VILL. SIHIN, POST RAUTMAU, DISTT. AZAMGARH(U.P) <br><br>
+            📞 :) 9794333054, 9170133055
+        </div>
+    </div>
+    <div class="info" data-aos="zoom-in">
+        AWAITING TO WELCOME <br>
+        MR. DR. SYED KAISAR HUSAIN <br>& BROTHERS & ALL FAMILY 🥰
+    </div>
+    <a class="btn-location" href="https://maps.app.goo.gl/XLX5ph85kPVsFGLW8" target="_blank" data-aos="fade-up">
+        <i class="fa-solid fa-location-dot"></i> View Location on Map
+    </a>
+
+
+    <script>
+        function handleRSVP() {
+            alert("Thank you for RSVPing! ");
+        }
+
+        const toggleBtn = document.getElementById('themeToggle');
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+            toggleBtn.textContent = '☀️';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            toggleBtn.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+
+</html>
